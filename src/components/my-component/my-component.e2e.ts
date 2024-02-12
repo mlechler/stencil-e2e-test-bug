@@ -1,5 +1,4 @@
 import { newE2EPage } from '@stencil/core/testing';
-import { waitUntilHTMLRendered } from '../../utils/wait.helper';
 
 describe('my-component', () => {
   it('renders', async () => {
@@ -7,7 +6,6 @@ describe('my-component', () => {
       url: '/src/components/my-component',
       waitUntil: ['domcontentloaded', 'networkidle0'],
     });
-    await waitUntilHTMLRendered(page);
     const results = await page.compareScreenshot();
     expect(results).toMatchScreenshot();
   });
