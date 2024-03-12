@@ -25,9 +25,30 @@ export const config: Config = {
     waitBeforeScreenshot: 20,
     emulate: [
       {
+        userAgent: 'Dark',
+        viewport: {
+          width: 600,
+          height: 600,
+        },
+      },
+      {
         userAgent: 'Default',
         viewport: {
           width: 600,
+          height: 600,
+        },
+      },
+      {
+        userAgent: 'Condensed',
+        viewport: {
+          width: 400,
+          height: 600,
+        },
+      },
+      {
+        userAgent: 'Presentation',
+        viewport: {
+          width: 800,
           height: 600,
         },
       },

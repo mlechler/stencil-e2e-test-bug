@@ -7,6 +7,20 @@
 
     <script type="module" src="/build/stencil-e2e-test-bug.esm.js"></script>
     <script nomodule src="/build/stencil-e2e-test-bug.js"></script>
+    <script>
+      console.log(window.navigator.userAgent);
+      switch (window.navigator.userAgent) {
+        case 'Dark':
+          document.documentElement.setAttribute('data-theme', 'dark');
+          break;
+        case 'Condensed':
+          document.documentElement.setAttribute('data-spacing', 'condensed');
+          break;
+        case 'Presentation':
+          document.documentElement.setAttribute('data-spacing', 'presentation');
+          break;
+      }
+    </script>
   </head>
   <body>
     <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
