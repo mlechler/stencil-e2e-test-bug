@@ -1,3 +1,8 @@
 :host {
   display: block;
 }
+
+.test {
+  background: cornflowerblue;
+  margin: 10px;
+}
